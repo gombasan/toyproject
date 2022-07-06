@@ -13,4 +13,7 @@ public interface SerchDao {
 	
 	@Select("SELECT * FROM WINE")
 	List<WineEntity> getList();
+	
+	@Select("SELECT * FROM WINE WHERE id = #{id}")
+	WineEntity getView(int id);
 }

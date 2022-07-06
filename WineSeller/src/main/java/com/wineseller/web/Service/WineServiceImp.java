@@ -19,4 +19,11 @@ public class WineServiceImp implements WineService{
 		List<WineEntity> list = serchDao.getList();
 		return list;
 	}
+
+	@Override
+	public WineEntity getView(int id) {
+		
+		WineEntity getView = serchDao.getView(id);
+		return getView;
+	}
 }

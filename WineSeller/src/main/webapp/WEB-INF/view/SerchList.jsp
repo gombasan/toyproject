@@ -95,8 +95,8 @@
 										<table class="alt">
 											<thead>
 												<tr>
-													<th>Name</th>
-													<th>Description</th>
+													<th>Id</th>
+													<th>WineName</th>
 													<th>Price</th>
 												</tr>
 											</thead>
@@ -104,7 +104,7 @@
 												<c:forEach var = "n" items = "${list}">
 												<tr>
 													<td>${n.id}</td>
-													<td>${n.winename}</td>
+													<td><a href="detail?id=${n.id}">${n.winename}</a></td>
 													<td>${n.price}</td>
 												</tr>
 												</c:forEach>
@@ -112,6 +112,7 @@
 										</table>
 									</div>
 								</section>
+					
 					<div id="sidebar">
 						<div class="inner">
 
@@ -158,6 +159,7 @@
 						</div>
 					</div>
 
+			</div>
 							<!-- Footer -->
 								<footer id="footer">
 									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
@@ -166,7 +168,7 @@
 						</div>
 					</div>
 
-			</div>
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

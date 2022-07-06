@@ -8,4 +8,5 @@ public interface WineService {
 	
 	
 	List<WineEntity> getList();
+	WineEntity getView(int id);
 }

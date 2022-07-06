@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wineseller.web.Service.WineService;
 import com.wineseller.web.entity.WineEntity;
@@ -29,5 +31,12 @@ public class HomeController {
 		
 		model.addAttribute("list", list);
 		return "SerchList";
+	}
+	
+	@RequestMapping("/detail")
+	@ResponseBody
+	public WineEntity detail(@RequestParam(name = "id", defaultValue = "1")int WineId) {
+		WineEntity detail = wineService.getView(WineId);
+		return detail;
 	}
 }
