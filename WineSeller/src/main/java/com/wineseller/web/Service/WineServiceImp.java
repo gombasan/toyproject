@@ -15,8 +15,12 @@ public class WineServiceImp implements WineService{
 	private SerchDao serchDao;
 
 	@Override
-	public List<WineEntity> getList() {
-		List<WineEntity> list = serchDao.getList();
+	public List<WineEntity> getList(int page) {
+		
+		int size = 4;
+		int offset = 0+(page-1)*size;
+		
+		List<WineEntity> list = serchDao.getList(offset, size);
 		return list;
 	}
 
@@ -26,4 +30,5 @@ public class WineServiceImp implements WineService{
 		WineEntity getView = serchDao.getView(id);
 		return getView;
 	}
+
 }

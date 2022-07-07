@@ -24,10 +24,10 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/serch")
-	public String serch(Model model) {
+	public String serch(@RequestParam(name="page")int page, Model model) {
 		
 		
-		List<WineEntity> list = wineService.getList();
+		List<WineEntity> list = wineService.getList(page);
 		
 		model.addAttribute("list", list);
 		return "SerchList";

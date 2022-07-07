@@ -11,8 +11,7 @@ import com.wineseller.web.entity.WineEntity;
 public interface SerchDao {
 	
 	
-	@Select("SELECT * FROM WINE")
-	List<WineEntity> getList();
+	List<WineEntity> getList(int offset, int size);
 	
 	@Select("SELECT * FROM WINE WHERE id = #{id}")
 	WineEntity getView(int id);

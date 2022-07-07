@@ -111,6 +111,15 @@
 											</tbody>
 										</table>
 									</div>
+									<section>
+									<ul class="pagination">
+										<li><span class="button">Prev</span></li>
+										<li><a href="serch?page=1" class="page">1</a></li>
+										<li><a href="serch?page=2" class="page">2</a></li>
+										<li><a href="serch?page=3" class="page">3</a></li>
+										<li><a href="#" class="button">Next</a></li>
+									</ul>
+									</section>
 								</section>
 					
 					<div id="sidebar">

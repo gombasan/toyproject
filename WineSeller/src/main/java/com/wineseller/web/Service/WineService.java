@@ -7,6 +7,6 @@ import com.wineseller.web.entity.WineEntity;
 public interface WineService {
 	
 	
-	List<WineEntity> getList();
+	List<WineEntity> getList(int page);
 	WineEntity getView(int id);
 }
